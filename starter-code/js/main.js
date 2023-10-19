@@ -20,3 +20,32 @@ function showInfo(){
 
     
 }
+
+async function updateQuote() {
+    // Fetch a random quote from the Quotable API
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    console.log(data)
+    const quoteBody = document.getElementById("quote")
+    const quoteauthor = document.getElementById("quoteauthor")
+    if (response.ok) {
+        // Update DOM elements
+        quoteBody.textContent = data.content;
+        quoteauthor.textContent = data['author'];
+    } else {
+        quote.textContent = "An error occured";
+        console.log(data);
+    }
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const refreshBtn = document.getElementById("refreshBtn")
+    refreshBtn.addEventListener("click", () => {
+        updateQuote()
+    })
+
+    updateQuote()
+});

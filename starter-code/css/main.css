@@ -89,13 +89,13 @@ table {
     font-weight: 700;
     line-height: 28px; /* 155.556% */
 }
-.quote__container > svg{
+.quote__container > img{
     padding-top: 10.67px;
     padding-left: 15.67px;
     width: 16.667px;
     height: 16.667px;
     flex-shrink: 0;
-    fill: #000000;
+    color: black;
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -214,7 +214,6 @@ table {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20.387113571166992px);
     padding-top: 74px;
-    display: flex;
     justify-content: space-around;
     align-content: center;
 }
