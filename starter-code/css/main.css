@@ -209,9 +209,113 @@ table {
     display: none;
     left: 0;
     bottom: 0;
-    height: 435px;
+    height: 400px;
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20.387113571166992px);
+    padding-top: 74px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
+.timezone_year__container{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.timezone > h2{
+    color: #303030;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 186.667% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.timezone > h1{
+    margin-top: 9px;
+    color: #303030;
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.yearday > h2{
+    color: #303030;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 186.667% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.yearday > h1{
+    margin-top: 9px;
+    color: #303030;
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.splitline{
+    width: 1px;
+    height: 252px;
+    flex-shrink: 0;
+    opacity: 0.25;
+    background: #303030;
+}
+.weeddaynum{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.weeddaynum > div:nth-child(1) > h2{
+    color: #303030;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 186.667% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.weeddaynum > div:nth-child(1) > h1{
+    margin-top: 9px;
+    color: #303030;
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.weeddaynum > div:nth-child(2) > h2{
+    color: #303030;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 186.667% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.weeddaynum > div:nth-child(2) > h1{
+    margin-top: 9px;
+    color: #303030;
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
