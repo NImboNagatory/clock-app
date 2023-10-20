@@ -44,12 +44,12 @@ function updateTime(lat, long) {
                 // The sun has already set, so calculate time until sunrise
                 const message = "BSR";
                 bstBsr.textContent = message
-                bckimg.style = "background-image: url('../assets/desktop/bg-image-nighttime.jpg');"
+                bckimg.style = "background-image: linear-gradient(to bottom, #00000000, #000000), url('../assets/desktop/bg-image-nighttime.jpg');"
             } else {
                 // Calculate time until sunset
                 const message = "BSD";
                 bstBsr.textContent = message
-                bckimg.style = "background-image: url('../assets/desktop/bg-image-daytime.png');"
+                bckimg.style = "background-image: linear-gradient(to bottom, #00000000, #000000), url('../assets/desktop/bg-image-daytime.png');"
 
             }
         })
@@ -141,6 +141,8 @@ async function getLatLong() {
 setInterval(timedUpdate, 1000)
 function timedUpdate(){
     const curtime = document.getElementById("time")
+    const greeting = document.getElementById("greetingtxt")
+    const dayNightIcon = document.getElementById("dayNightIcon")
     const currentTime = new Date();
     let min = '';
     switch (currentTime.getMinutes()){
@@ -178,8 +180,20 @@ function timedUpdate(){
             min=currentTime.getMinutes()
             break
     }
-
+    const time = parseInt(currentTime.getHours()) 
+    if (time >= 1 && time <= 12) {
+      greeting.textContent = "GOOD MORNING, IT'S CURRENTLY";
+      dayNightIcon.src = './assets/desktop/icon-sun.svg'
+  } else if (time >= 13 && time <= 17) {
+      greeting.textContent = "GOOD AFTERNOON, IT'S CURRENTLY";
+        dayNightIcon.src = './assets/desktop/icon-sun.svg'
+  } else if (time >= 18 && time <= 24) {
+        dayNightIcon.src = './assets/desktop/icon-moon.svg'
+      greeting.textContent = "GOOD EVENING, IT'S CURRENTLY";
+  }
+    console.log(time)
     curtime.textContent = `${currentTime.getHours()}:${min}`
+
 }
 
 

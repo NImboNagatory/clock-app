@@ -53,7 +53,7 @@ table {
 
 .main__container{
     height: 100vh;
-    background-image: url("../assets/desktop/bg-image-daytime.png");
+    background-image:linear-gradient(to bottom, #00000000, #000000), url("../assets/desktop/bg-image-daytime.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
