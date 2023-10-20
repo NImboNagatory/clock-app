@@ -25,6 +25,7 @@ function updateTime(lat, long) {
     const longitude = long;
     const bstBsr = document.getElementById("bstBsr")
     const bckimg = document.getElementById("main__container")
+    const curtime = document.getElementById("time")
 
     // Define the URL for the Sunset and Sunrise API
     const apiUrl = `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}`;
@@ -39,7 +40,7 @@ function updateTime(lat, long) {
 
             // Get the current time
             const currentTime = new Date();
-
+            curtime.textContent = `${currentTime.getHours()}:${currentTime.getMinutes()}`
             if (currentTime > new Date(sunsetTime)) {
                 // The sun has already set, so calculate time until sunrise
                 const message = "BSR";
@@ -112,6 +113,7 @@ async function updateTimezone() {
 async function getLatLong() {
     // Define your API key (sign up for a free API key at https://ipgeolocation.io/)
     const apiKey = '9ac0e342ee9b437b9e3f4891bd347769';
+    const location = document.getElementById("location")
 
     // Define the API endpoint
     const apiUrl = `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`;
@@ -127,7 +129,7 @@ async function getLatLong() {
         console.log(data)
         const latitude = data.latitude;
         const longitude = data.longitude;
-
+        location.textContent = `IN ${data.country_capital}, ${data.country_code2}`
         // Display the latitude and longitude
         console.log(`Latitude: ${latitude}`);
         console.log(`Longitude: ${longitude}`);
@@ -139,6 +141,17 @@ async function getLatLong() {
     }
 }
 
+setInterval(timedUpdate, 1000)
+
+function timedUpdate(){
+  getLatLong()
+    .then(([latitude, longitude]) => {
+        updateTime(latitude, longitude)
+    })
+    .catch(error => {
+        console.log(`error with geolocating api ${error}`)
+    });
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
