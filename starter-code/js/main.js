@@ -24,6 +24,7 @@ function updateTime(lat, long) {
     const latitude = lat;
     const longitude = long;
     const bstBsr = document.getElementById("bstBsr")
+    const bckimg = document.getElementById("main__container")
 
     // Define the URL for the Sunset and Sunrise API
     const apiUrl = `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}`;
@@ -43,10 +44,12 @@ function updateTime(lat, long) {
                 // The sun has already set, so calculate time until sunrise
                 const message = "BSR";
                 bstBsr.textContent = message
+                bckimg.style = "background-image: url('./assets/desktop/bg-image-nighttime.jpg');"
             } else {
                 // Calculate time until sunset
                 const message = "BST";
                 bstBsr.textContent = message
+                bckimg.style = "background-image: url('../assets/desktop/bg-image-daytime.png');"
 
             }
         })
