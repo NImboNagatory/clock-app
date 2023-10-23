@@ -79,7 +79,7 @@ async function updateTimezone() {
   const weeknum = document.getElementById("weekNum");
   const timezone = document.getElementById("timeZone");
 
-  const apiUrl = "http://worldtimeapi.org/api/ip";
+  const apiUrl = "https://worldtimeapi.org/api/ip";
 
   // Use the fetch API to make a GET request to the API
   fetch(apiUrl)
