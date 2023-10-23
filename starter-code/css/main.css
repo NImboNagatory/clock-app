@@ -69,6 +69,7 @@ table {
     height: 125px;
     flex-shrink: 0;
     position: relative;
+    margin-bottom: 25.03298350824588%;
 }
 .quote__container > h1{
     width: 540px;
@@ -106,7 +107,6 @@ table {
     color: #000;
 }
 .time__container{
-    margin-top: 16.180555555555557%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -519,7 +519,7 @@ table {
         padding-right: 6.666666666666667%;
     }
     .quote__container{
-        margin-bottom: 34.03298350824588%;
+        margin-bottom: 90.03298350824588%;
         width: 305px;
     }
     .quote__container > h1{
@@ -624,6 +624,7 @@ table {
     .timezone{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     .timezone > h2{
         color: #303030;
@@ -647,6 +648,7 @@ table {
     .yearday{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     .yearday > h2{
         color: #303030;
@@ -670,11 +672,13 @@ table {
     .dayofweek{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     
     .weeknum{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     .weeddaynum > div:nth-child(1) > h2{
         color: #303030;
@@ -716,5 +720,16 @@ table {
         font-weight: 700;
         line-height: normal;
     }
-    
+    .timezone_year__container{
+        width: 323px;
+        gap: 16px;
+    }
+    .weeddaynum{
+        margin-top: 16px;
+        width: 323px;
+        gap: 16px;
+    }
+    .info__container{
+        height: 256px;
+    }
 }

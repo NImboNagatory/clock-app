@@ -2,7 +2,7 @@ function showInfo() {
   const quoteCont = document.getElementById("quote__container");
   const moreBtnText = document.getElementById("btn_text");
   const moreBtnSvg = document.getElementById("btn_svg");
-  const timeCont = document.getElementById("time__container");
+  const timeCont = document.getElementById("timeData");
   const infoCont = document.getElementById("info__container");
   if (moreBtnText.textContent === "MORE") {
     moreBtnText.textContent = "LESS";
@@ -13,7 +13,7 @@ function showInfo() {
   } else if (moreBtnText.textContent === "LESS") {
     moreBtnText.textContent = "MORE";
     moreBtnSvg.src = "./assets/desktop/icon-arrow-down.svg";
-    timeCont.style = "margin-top:16.180555555555557%;";
+    timeCont.style = "margin-top:0;";
     quoteCont.style = "display:block;";
     infoCont.style = "display:none;";
   }
@@ -44,13 +44,10 @@ function updateTime(lat, long) {
                 // The sun has already set, so calculate time until sunrise
                 const message = "BSR";
                 bstBsr.textContent = message
-                bckimg.style = "background-image: linear-gradient(to bottom, #00000000, #000000), url('../assets/desktop/bg-image-nighttime.jpg');"
             } else {
                 // Calculate time until sunset
                 const message = "BSD";
                 bstBsr.textContent = message
-                bckimg.style = "background-image: linear-gradient(to bottom, #00000000, #000000), url('../assets/desktop/bg-image-daytime.png');"
-
             }
         })
         .catch((error) => {
