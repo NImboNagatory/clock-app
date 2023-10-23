@@ -100,8 +100,11 @@ table {
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
 }
-
+.refreshBtn:hover{
+    color: #000;
+}
 .time__container{
     margin-top: 16.180555555555557%;
     display: flex;
@@ -132,8 +135,6 @@ table {
 }
 
 .time__container >div:nth-child(2){
-    width: 575px;
-    height: 200px;
     flex-shrink: 0;
     display: flex;
     gap:11px;
@@ -173,6 +174,7 @@ table {
 
 .more__btn{
     display: flex;
+    cursor: pointer;
     gap: 13px;
     align-items: center;
     justify-content: center;
@@ -182,7 +184,7 @@ table {
     border-radius: 28px;
     background: #FFF;
     align-self: end;
-    margin-left: 50%;
+    margin-left: 27.013888888888886%;
 }
 .more__btn > h1{
     color: #000;
@@ -200,7 +202,7 @@ table {
     flex-shrink: 0;
 }
 
-.display_flex_gap410px{
+.timeData{
     display: flex;
 }
 
@@ -213,9 +215,8 @@ table {
     width: 100%;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20.387113571166992px);
-    padding-top: 74px;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
 }
 
 .timezone_year__container{
@@ -317,4 +318,279 @@ table {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+
+@media only screen and (max-width: 1070px){
+    .main__container{
+        background-image: url("../assets/tablet/bg-image-daytime.jpg");
+        padding-left: 5.989583333333334%;
+        padding-right: 5.989583333333334%;
+    }
+    .quote__container{
+        width: 525px;;
+        height: 125px;
+        flex-shrink: 0;
+        margin-bottom: 27.013888888888886%;
+    }
+    .quote__container > h1{
+        width: 520px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+    }
+    .quote__container > h2{
+        width: 540px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 155.556% */
+    }
+    .quote__container > img{
+        width: 16.667px;
+        height: 16.667px;
+        flex-shrink: 0;
+    }
+    .time__container > div:nth-child(1) > h1{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+    }
+    .time__container > div:nth-child(1) > img{
+        width: 24px;
+        height: 24px;
+    }
+    .time__container > div:nth-child(2) > h1{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 175px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 175px; /* 100% */
+        letter-spacing: -4.375px;
+    }
+    .time__container > div:nth-child(2) >h2{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px; /* 87.5% */
+        text-transform: uppercase;
+    }
+    .time__container > div:nth-child(2) >h2{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 155.556% */
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    .time__container > div:nth-child(3) > h1{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 155.556% */
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+    }
+    .more__btn{
+        width: 146px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 28px;
+        background: #FFF;
+        align-self: start;
+        margin: 0;
+        margin-top: 80px;
+    }
+    .more__btn > h1{
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 175% */
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    .timeData{
+        display: flex;
+        flex-direction: column;
+    }
+     
+    .timezone > h2{
+        color: #303030;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 215.385% */
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+    }
+    .timezone > h1{
+        color: #303030;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .yearday > h2{
+        color: #303030;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 215.385% */
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+    }
+    .yearday > h1{
+        color: #303030;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .weeddaynum > div:nth-child(1) > h2{
+        color: #303030;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 215.385% */
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+    }
+    .weeddaynum > div:nth-child(1) > h1{
+        color: #303030;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .weeddaynum > div:nth-child(2) > h2{
+        color: #303030;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 215.385% */
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+    }
+    .weeddaynum > div:nth-child(2) > h1{
+        color: #303030;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .splitline{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 572px){
+    .main__container{
+        background-image: url("../assets/mobile/bg-image-daytime.jpg");
+        padding-left: 6.666666666666667%;
+        padding-right: 6.666666666666667%;
+    }
+    .quote__container{
+        margin-bottom: 34.03298350824588%;
+        width: 305px;
+    }
+    .quote__container > h1{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 183.333% */
+        width: 290px;
+    }
+    .quote__container > h2{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px; /* 183.333% */
+        width: inherit;
+    }
+    .quote__container > img{
+        width: 16.667px;
+        height: 16.667px;
+        flex-shrink: 0;
+    }
+    .timeData{
+        width: 278px;
+    }
+
+    .time__container > div:nth-child(1) > h1{   
+        color: #FFF;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 166.667% */
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    .time__container > div:nth-child(1) > img{
+        width: 24px;
+        height: 24px;
+    }
+    .time__container > div:nth-child(2) > h1{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100px; /* 100% */
+        letter-spacing: -2.5px;
+        height: 100px;
+    }
+    .time__container > div:nth-child(2) > h2{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px; /* 186.667% */
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    .time__container > div:nth-child(3) > h1{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 186.667% */
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
 }
