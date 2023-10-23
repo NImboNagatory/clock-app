@@ -323,7 +323,6 @@ table {
 
 @media only screen and (max-width: 1070px){
     .main__container{
-        background-image: url("../assets/tablet/bg-image-daytime.jpg");
         padding-left: 5.989583333333334%;
         padding-right: 5.989583333333334%;
     }
@@ -514,7 +513,6 @@ table {
 
 @media only screen and (max-width: 572px){
     .main__container{
-        background-image: url("../assets/mobile/bg-image-daytime.jpg");
         padding-left: 6.666666666666667%;
         padding-right: 6.666666666666667%;
     }
